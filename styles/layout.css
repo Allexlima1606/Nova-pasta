@@ -1,0 +1,66 @@
+#app {
+    background-color: var(--surface-secondary);
+    display: grid;
+    grid-template-columns: 35% 57.75%; /* Layout em duas colunas */
+    
+   
+}
+
+main {    
+    background-color: var(--surface-primary);
+    margin-left: 10rem;
+    margin-top: 3rem;
+    padding-left: 2rem;
+    border-radius: 1rem 0 0 1rem;
+    max-height: 49.50rem;
+
+    .hero-icon {
+        position: absolute;
+        margin-top: 3rem;
+        margin-left: 2rem;
+        width: 2.86rem;
+        height: 3rem;
+        z-index: 2;
+    }
+
+    .hero-icon-1 {
+        position: absolute;
+        margin-top: 7rem;
+        margin-left: 2rem;
+        /* width: 21rem; */
+        height: 3.37rem;
+        z-index: 2;
+    }
+
+  .hero-icon-2 {
+        position: absolute;
+        margin-top: 2rem;
+        width:28rem;
+        height: 45.50rem;
+        border-radius: 1rem;
+        z-index: 1;
+    }
+
+    .hero-text p {
+        position: absolute;
+        margin-left: 2rem;
+        margin-top: 12rem;
+        font: 400 .850rem/1.5 var(--font-family);
+        z-index: 2;
+    }
+}
+
+.container {
+    background-color: var(--surface-primary);
+    margin-top: 3rem;
+    padding-left: 2rem;
+    border-radius: 0 1rem 1rem 0;
+    
+
+    aside {
+        background-color: var(--surface-secondary); 
+        max-width: 63.50rem;
+        margin-top: 2rem;  
+    }
+
+}
