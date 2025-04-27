@@ -9,18 +9,19 @@ form {
     gap: 2rem;
 }
 
+/* Estilo dos fieldsets */
 fieldset {
-    border: 1px solid var(--text-secondary);
-    border-radius: 0.5rem; /* Adicionado para bordas arredondadas */
+    border: 1px solid var(--surface-disabled);
+    border-radius: 0.5rem;
     display: grid;
     gap: 2rem;
-    padding: 1.5rem; /* Adicionado para espaçamento interno */
+    padding: 1.5rem;
 }
 
 legend {
     font: 600 1rem/1.25 var(--font-family);
     margin-bottom: 2.5rem;
-    color: var(--text-primary); /* Adicionado para consistência de cores */
+    color: var(--text-primary);
 }
 
 fieldset + fieldset {
@@ -31,17 +32,27 @@ fieldset + fieldset {
 .actions-wrapper {
     margin-top: 3rem;
     display: flex;
-    justify-content: flex-end; /* Alinha ações à direita */
+    justify-content: flex-end;
     gap: 1rem;
 }
 
 .actions-wrapper button {
+    
     padding: 0.75rem 1.5rem;
     font: var(--text-sm);
     border: none;
     border-radius: 0.5rem;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+/* 
+.actions-wrapper button:hover {
+    transform: scale(1.05);
+}
+
+.actions-wrapper button:focus {
+    outline: 2px solid var(--focus-color);
+    outline-offset: 2px;
 }
 
 .actions-wrapper button.primary {
@@ -60,4 +71,34 @@ fieldset + fieldset {
 
 .actions-wrapper button.secondary:hover {
     background-color: var(--surface-disabled);
+} */
+
+/* Responsividade */
+@media (max-width: 768px) {
+    form {
+        gap: 1.5rem;
+    }
+
+    fieldset {
+        padding: 1rem;
+    }
+
+    .actions-wrapper {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1rem;
+    }
+
+    .actions-wrapper button {
+        width: 100%;
+    }
+}
+
+/* Feedback visual para campos */
+input:invalid {
+    border-color: var(--semantic-error);
+}
+
+input:valid {
+    border-color: var(--stroke-highlight);
 }

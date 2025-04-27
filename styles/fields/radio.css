@@ -1,3 +1,4 @@
+/* Estilo do wrapper */
 label + .radio-wrapper {
     margin-top: 1rem;
 }
@@ -8,18 +9,17 @@ label + .radio-wrapper {
     gap: 1rem;
 }
 
+/* Estilo dos itens de rádio */
 .radio-inner {
     border: 1px solid var(--stroke-default);
     border-radius: 0.5rem;
-
-
     display: grid;
     justify-items: center;
     gap: 0.5rem;
-
-    /* padding: 2rem 0.5rem 0.5rem; */
-
     position: relative;
+    transition: border-color 0.3s ease;
+
+    /* Estilo do input */
     & input,
     & input:focus,
     & input:hover {
@@ -28,39 +28,37 @@ label + .radio-wrapper {
         inset: 0;
     }
 
-    
-
-    /* .radio-image {
-        background-image: url(../../assets/icons/radio-defaut.svg);
-        background-repeat: no-repeat;
-
-        width: 1.5rem;
-        height: 1.5rem;
-
-        position: absolute;
-        top: 0.5rem;
-        left: 0.5rem;
-    } */
-
+    /* Estados de interação */
     &:hover, &:focus-within {
         border: 1px solid var(--stroke-highlight);
-
-        & .radio-image {
-            background-image: url(../../assets/icons/radio-hover.svg);
-        }
     }
 
     &:has(:checked) {
         border: 2px solid var(--stroke-highlight);
-
-        & .radio-image {
-            background-image: url(../../assets/icons/radio-checked.svg);
-        }
     }
 }
 
+/* Estilo das cartas */
 .cards {
-    width:8rem;
+    width: 8rem;
     height: 14rem;
+}
 
+/* Responsividade */
+@media (max-width: 768px) {
+    .radio-wrapper {
+        grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
+        gap: 0.75rem;
+    }
+
+    .cards {
+        width: 6rem;
+        height: 12rem;
+    }
+}
+
+/* Acessibilidade */
+.radio-inner input:focus-visible {
+    outline: 2px solid var(--focus-color);
+    outline-offset: 2px;
 }

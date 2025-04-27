@@ -1,0 +1,59 @@
+/* button {
+    background-color: transparent;  
+    margin-top: 1rem;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1rem;
+    color: var(--text-highlight);
+    padding: .75rem 1.5rem;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+
+    &.btn {
+        color: white;
+        background-color:#1D6FB6;
+
+        &:hover,
+        &:focus {
+            background-color: #3487CF;
+        }
+    }
+}
+
+.btn-icon {
+   width: 1.25rem;
+   height: 1.2rem;
+} */
+
+/* Centralizar o botão */
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 1rem;
+    margin: 1rem auto; /* Centraliza horizontalmente */
+    padding: 0.75rem 1.5rem;
+    background-color: #1D6FB6;
+    color: #fff;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    .btn-icon {
+        width: 1.25rem;
+        height: 1.2rem;
+        margin-right: 0.5rem; /* Espaçamento entre o ícone e o texto */
+    }
+}
+
+.btn:hover {
+    background-color: #3487CF;
+}
+
+/* Para alinhar à direita */
+.contact-info .btn {
+    margin: 1rem 0 0 auto; /* Remove centralização e alinha à direita */
+}

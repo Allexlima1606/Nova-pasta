@@ -60,7 +60,14 @@ main {
     aside {
         background-color: var(--surface-secondary); 
         max-width: 63.50rem;
-        margin-top: 2rem;  
+        margin-top: 2rem; 
+        padding: 3rem;
     }
 
+}
+
+.contact {
+    display: flex;
+    gap: 1rem;
+    
 }

@@ -11,20 +11,20 @@
     --text: 400 1rem/1.5 var(--font-family);
     --text-sm: 400 0.875rem/1.4 var(--font-family);
 
-    --text-primary: #C8CDD0;
+    --text-primary: #ffffff;
     --text-secondary: #F9F9F9;
     --text-tertiary: #8F8881;
-    --text-highlight: #E43A12;
+    --text-highlight: #59B2FF;
 
     --surface-primary: #131516;
     --surface-secondary: #212427;
-    --surface-disabled: #E7E5E4;
+    --surface-disabled: #762a04;
 
-    --stroke-default: #131516;
-    --stroke-highlight: #F3541C;
+    --stroke-default: #25333c;
+    --stroke-highlight: #59B2FF;
     --semantic-error: #DC2626;
 
-    --focus-color: #F3541C;
+    --focus-color: #59B2FF;
 
     --spacing-small: 0.5rem;
     --spacing-medium: 1rem;
