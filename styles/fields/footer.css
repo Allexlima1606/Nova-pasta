@@ -1,8 +1,6 @@
 .footer {
     display: flex;
     justify-content: space-around; /* Espaçamento entre os itens */
-
-
 }
 
 /* Estilo para a seção de opções de estilo */
@@ -20,7 +18,6 @@
 .switch-label {
     cursor: pointer;
     position: relative; /* Necessário para o posicionamento do ícone */
-    
 }
 
 /* Estilo para o ícone do switch */
@@ -28,17 +25,16 @@
     width: 10rem; /* Largura do ícone */
     height: 3rem; /* Altura do ícone */
     background-image: url("../../assets/icons/switch-off.svg"); /* Caminho para a imagem inicial */
-
+    background-color: var(--secondary-color); /* Fallback para navegadores sem suporte a imagens */
     border-radius: 1rem; /* Deixa o ícone arredondado */
     transition: transform 0.3s ease, background-image 0.3s ease; /* Transição suave para a troca de imagem */
 }
 
 input:checked + .switch-label .switch-icon {
     background-image: url("../../assets/icons/switch-on.svg"); /* Caminho para a imagem de switch-on */
-    transform: scale(1.1); /* Efeito de zoom ao alternar */
+    transform: scale(1); /* Efeito de zoom ao alternar */
 }
 
-/* Adicionando estilo para foco no switch */
 .switch-label:focus-within .switch-icon {
     outline: 2px solid var(--primary-color);
     outline-offset: 2px;

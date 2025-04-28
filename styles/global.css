@@ -25,19 +25,33 @@
     --semantic-error: #DC2626;
 
     --focus-color: #59B2FF;
-
     --spacing-small: 0.5rem;
     --spacing-medium: 1rem;
     --spacing-large: 2rem;
 }
 
-/* Estilos Base */
+/* Estilos Globais */
 body {
-    margin: 0 4rem;
+    margin: 0 var(--spacing-medium);
     font: var(--text);
     color: var(--text-secondary);
     background-color: var(--surface-primary);
     padding: 0 var(--spacing-medium);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
 }
 
 /* Títulos */
@@ -84,6 +98,13 @@ h1, h2 {
 @media (max-width: 768px) {
     body {
         font-size: 0.875rem;
+        padding: 0 var(--spacing-small);
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 0.75rem;
         padding: 0 var(--spacing-small);
     }
 }
