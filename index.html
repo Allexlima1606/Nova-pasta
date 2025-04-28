@@ -72,69 +72,101 @@
                 <fieldset class="enroll-options">
                     <legend>Personalização</legend>
 
-                    <div class="input-wrapper">
-                        <label>Cor principal</label>
-                        <div class="color-options" role="group" aria-label="Opções de cores">
-                            <button class="color" style="background-color: #FFA07A;" aria-label="Cor Salmão"></button>
-                            <button class="color" style="background-color: #20B2AA;"
-                                aria-label="Cor Verde Água"></button>
-                            <button class="color" style="background-color: #9370DB;" aria-label="Cor Roxo"></button>
-                            <button class="color" style="background-color: #FF6347;" aria-label="Cor Vermelho"></button>
+                    <div class="palette-container">
+                        <label for="primary-color">Cor principal:</label>
+                        <div class="color-palette">
+                            <button class="color" style="background-color: #00BFFF;"></button>
+                            <button class="color" style="background-color: #00BFFF;"></button>
+                            <button class="color" style="background-color: #8A2BE2;"></button>
+                            <button class="color" style="background-color: #FF1493;"></button>
+                            <button class="color" style="background-color: #FF4500;"></button>
+                            <button class="color" style="background-color: #FFA500;"></button>
+                            <button class="color" style="background-color: #FFD700;"></button>
+                            <button class="color" style="background-color: #ADFF2F;"></button>
+                            <button class="color" style="background-color: #00FF7F;"></button>
+                            <button class="color" style="background-color: #00FFFF;"></button>
+                            <button class="color" style="background-color: #008080;"></button>
                         </div>
                     </div>
 
                     <div class="input-wrapper">
                         <h3>Tema do Evento</h3>
 
-                        <div class="radio-wrapper">
-                            <div class="radio-inner">
-                                <div class="radio-image"></div>
-                                <img class="cards" src="./assets/cards/aniversario.svg" alt="Tema Aniversário">
-                            </div>
-                            <div class="radio-inner">
-                                <div class="radio-image"></div>
-                                <img class="cards" src="./assets/cards/infantil.svg" alt="Tema Infantil">
-                            </div>
-                            <div class="radio-inner">
-                                <div class="radio-image"></div>
-                                <img class="cards" src="./assets/cards/formatura.svg" alt="Tema Formatura">
-                            </div>
-                            <div class="radio-inner">
-                                <div class="radio-image"></div>
-                                <img src="./assets/cards/casamento.svg" alt="Tema Casamento">
-                            </div>
-                            <div class="radio-inner">
-                                <div class="radio-image"></div>
-                                <img src="./assets/cards/cha-de-bebe.svg" alt="Tema Chá de Bebê">
-                            </div>
-                            <div class="radio-inner">
-                                <div class="radio-image"></div>
-                                <img src="./assets/cards/cha-de-panela.svg" alt="Tema Chá de Panela">
-                            </div>
-                            <div class="radio-inner">
-                                <div class="radio-image"></div>
-                                <img src="./assets/cards/carnaval.svg" alt="Tema Carnaval">
-                            </div>
-                            <div class="radio-inner">
-                                <div class="radio-image"></div>
-                                <img src="./assets/cards/pascoa.svg" alt="Tema Páscoa">
-                            </div>
-                            <div class="radio-inner">
-                                <div class="radio-image"></div>
-                                <img src="./assets/cards/sao-joao.svg" alt="Tema São João">
-                            </div>
-                            <div class="radio-inner">
-
-                                <img src="./assets/cards/halloween.svg" alt="Tema Halloween">
-                            </div>
-                            <div class="radio-inner">
-                                <div class="radio-image"></div>
-                                <img src="./assets/cards/natal.svg" alt="Tema Natal">
-                            </div>
-                            <div class="radio-inner">
-                                <div class="radio-image"></div>
-                                <img src="./assets/cards/outro.svg" alt="Tema Outro">
-                            </div>
+                        <div class="radio-wrapper" role="group" aria-label="Seleção de temas">
+                            <ul class="radio-list">
+                                <li class="radio-inner">
+                                    <button class="radio-button" aria-label="Tema Aniversário">
+                                        <img class="cards" src="./assets/cards/aniversario.svg" alt="Tema Aniversário"
+                                            loading="lazy">
+                                    </button>
+                                </li>
+                                <li class="radio-inner">
+                                    <button class="radio-button" aria-label="Tema Infantil">
+                                        <img class="cards" src="./assets/cards/infantil.svg" alt="Tema Infantil"
+                                            loading="lazy">
+                                    </button>
+                                </li>
+                                <li class="radio-inner">
+                                    <button class="radio-button" aria-label="Tema Formatura">
+                                        <img class="cards" src="./assets/cards/formatura.svg" alt="Tema Formatura"
+                                            loading="lazy">
+                                    </button>
+                                </li>
+                                <li class="radio-inner">
+                                    <button class="radio-button" aria-label="Tema Casamento">
+                                        <img class="cards" src="./assets/cards/casamento.svg" alt="Tema Casamento"
+                                            loading="lazy">
+                                    </button>
+                                </li>
+                                <li class="radio-inner">
+                                    <button class="radio-button" aria-label="Tema Chá de Bebê">
+                                        <img class="cards" src="./assets/cards/cha-de-bebe.svg" alt="Tema Chá de Bebê"
+                                            loading="lazy">
+                                    </button>
+                                </li>
+                                <li class="radio-inner">
+                                    <button class="radio-button" aria-label="Tema Chá de Panela">
+                                        <img class="cards" src="./assets/cards/cha-de-panela.svg"
+                                            alt="Tema Chá de Panela" loading="lazy">
+                                    </button>
+                                </li>
+                                <li class="radio-inner">
+                                    <button class="radio-button" aria-label="Tema Carnaval">
+                                        <img class="cards" src="./assets/cards/carnaval.svg" alt="Tema Carnaval"
+                                            loading="lazy">
+                                    </button>
+                                </li>
+                                <li class="radio-inner">
+                                    <button class="radio-button" aria-label="Tema Páscoa">
+                                        <img class="cards" src="./assets/cards/pascoa.svg" alt="Tema Páscoa"
+                                            loading="lazy">
+                                    </button>
+                                </li>
+                                <li class="radio-inner">
+                                    <button class="radio-button" aria-label="Tema São João">
+                                        <img class="cards" src="./assets/cards/sao-joao.svg" alt="Tema São João"
+                                            loading="lazy">
+                                    </button>
+                                </li>
+                                <li class="radio-inner">
+                                    <button class="radio-button" aria-label="Tema Halloween">
+                                        <img class="cards" src="./assets/cards/halloween.svg" alt="Tema Halloween"
+                                            loading="lazy">
+                                    </button>
+                                </li>
+                                <li class="radio-inner">
+                                    <button class="radio-button" aria-label="Tema Natal">
+                                        <img class="cards" src="./assets/cards/natal.svg" alt="Tema Natal"
+                                            loading="lazy">
+                                    </button>
+                                </li>
+                                <li class="radio-inner">
+                                    <button class="radio-button" aria-label="Tema Outro">
+                                        <img class="cards" src="./assets/cards/outro.svg" alt="Tema Outro"
+                                            loading="lazy">
+                                    </button>
+                                </li>
+                            </ul>
                         </div>
                     </div>
 
@@ -156,62 +188,64 @@
                                 <p id="cover-photo">Nenhum arquivo selecionado</p>
                             </div>
                         </div>
-                </fieldset>
+                        </fieldset>
 
-                <!-- Informações de contato -->
-                <section class="contact-info">
-                    <div class="contact">
-                        <img src="./assets/icons/contact.svg" alt="icon-contact" class="contact-icon">
-                        <h2>Dados para contato</h2>
-                    </div>
+                        <!-- Informações de contato -->
+                        <section class="contact-info">
+                            <div class="contact">
+                                <img src="./assets/icons/contact.svg" alt="icon-contact" class="contact-icon">
+                                <h2>Dados para contato</h2>
+                            </div>
 
-                    <label for="full-name">Nome</label>
-                    <input type="text" id="full-name" placeholder="Nome completo" class="input-field" required>
-                    <div class="error">
-                        <img src="assets/icons/alert-circle.svg" alt="Erro" class="error-icon">
-                        <span>Campo obrigatorio</span>
-                    </div>
+                            <label for="full-name">Nome</label>
+                            <input type="text" id="full-name" placeholder="Nome completo" class="input-field" required>
+                            <div class="error">
+                                <img src="assets/icons/alert-circle.svg" alt="Erro" class="error-icon">
+                                <span>Campo obrigatorio</span>
+                            </div>
 
-                    <div class="flex">
-                        <div class="input-wrapper flex-2">
-                            <label for="email">E-mail</label>
-                            <input type="email" id="email" placeholder="exemplo@email.com" class="input-field" required>
-                        </div>
+                            <div class="flex">
+                                <div class="input-wrapper flex-2">
+                                    <label for="email">E-mail</label>
+                                    <input type="email" id="email" placeholder="exemplo@email.com" class="input-field"
+                                        required>
+                                </div>
 
-                        <div class="input-wrapper flex-1">
-                            <label for="phone">Telefone</label>
-                            <input type="tel" id="phone" placeholder="(99) 99999-9999" class="input-field" required>
-                        </div>
-                    </div>
-                    <div class=" check">
-                        <div class="terms-wrapper input-wrapper checkbox-wrapper">
-                            <div class="checkbox-image"></div>
-                            <input type="checkbox" id="terms" name="terms" required>
-                            <label for="terms">
-                                Li e concordo com os <strong>Termos e Condições</strong> e a <strong>Política de
-                                    Privacidade</strong>
-                            </label>
-                        </div>
-                        <div class="terms-wrapper input-wrapper checkbox-wrapper">
-                            <div class="checkbox-image"></div>
-                            <input type="checkbox" id="terms" name="terms" required>
-                            <label for="terms">
-                                Aceito receber atualizações por <strong>e-mail.</strong>
-                            </label>
-                        </div>
-                        <div class="terms-wrapper input-wrapper checkbox-wrapper">
-                            <div class="checkbox-image"></div>
-                            <input type="checkbox" id="terms" name="terms" required>
-                            <label for="terms">
-                                Aceito receber promoções por <strong>SMS.</strong>
-                            </label>
-                        </div>
-                    </div>
-                    <button class="btn" type="button">
-                        <img src="./assets/icons/ticket.svg" alt="Ícone de convite" class="btn-icon">
-                        Gerar convite
-                    </button>
-                </section>
+                                <div class="input-wrapper flex-1">
+                                    <label for="phone">Telefone</label>
+                                    <input type="tel" id="phone" placeholder="(99) 99999-9999" class="input-field"
+                                        required>
+                                </div>
+                            </div>
+                            <div class=" check">
+                                <div class="terms-wrapper input-wrapper checkbox-wrapper">
+                                    <div class="checkbox-image"></div>
+                                    <input type="checkbox" id="terms" name="terms" required>
+                                    <label for="terms">
+                                        Li e concordo com os <strong>Termos e Condições</strong> e a <strong>Política de
+                                            Privacidade</strong>
+                                    </label>
+                                </div>
+                                <div class="terms-wrapper input-wrapper checkbox-wrapper">
+                                    <div class="checkbox-image"></div>
+                                    <input type="checkbox" id="terms" name="terms" required>
+                                    <label for="terms">
+                                        Aceito receber atualizações por <strong>e-mail.</strong>
+                                    </label>
+                                </div>
+                                <div class="terms-wrapper input-wrapper checkbox-wrapper">
+                                    <div class="checkbox-image"></div>
+                                    <input type="checkbox" id="terms" name="terms" required>
+                                    <label for="terms">
+                                        Aceito receber promoções por <strong>SMS.</strong>
+                                    </label>
+                                </div>
+                            </div>
+                            <button class="btn" type="button">
+                                <img src="./assets/icons/ticket.svg" alt="Ícone de convite" class="btn-icon">
+                                Gerar convite
+                            </button>
+                        </section>
             </aside>
         </div>
     </div>

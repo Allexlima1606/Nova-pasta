@@ -1,64 +1,68 @@
-/* Estilo do wrapper */
-label + .radio-wrapper {
+
+/* Estilo para o wrapper dos temas */
+.radio-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    border-radius: 0.875rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin-top: 1rem;
 }
 
-.radio-wrapper {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(7.5rem, 1fr));
-    gap: 1rem;
+/* Lista de temas */
+.radio-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.875rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-/* Estilo dos itens de rádio */
+/* Cada item da lista */
 .radio-inner {
-    border: 1px solid var(--stroke-default);
-    border-radius: 0.5rem;
-    display: grid;
-    justify-items: center;
-    gap: 0.5rem;
-    position: relative;
-    transition: border-color 0.3s ease;
-
-    /* Estilo do input */
-    & input,
-    & input:focus,
-    & input:hover {
-        all: unset;
-        position: absolute;
-        inset: 0;
-    }
-
-    /* Estados de interação */
-    &:hover, &:focus-within {
-        border: 1px solid var(--stroke-highlight);
-    }
-
-    &:has(:checked) {
-        border: 2px solid var(--stroke-highlight);
-    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    transition: border-color 0.3s ease, transform 0.2s ease;
 }
 
-/* Estilo das cartas */
-.cards {
-    width: 8rem;
-    height: 14rem;
+.radio-inner:hover {
+    border-color: #20b2aa;
+    transform: scale(1);
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-    .radio-wrapper {
-        grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
-        gap: 0.75rem;
-    }
-
-    .cards {
-        width: 6rem;
-        height: 12rem;
-    }
+/* Botão de seleção */
+.radio-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.2s ease;
 }
 
-/* Acessibilidade */
-.radio-inner input:focus-visible {
-    outline: 2px solid var(--focus-color);
+.radio-button:focus {
+    outline: 5px solid #20b2aa;
     outline-offset: 2px;
+    border-radius: 8px;
+}
+
+/* Imagens dos temas */
+.cards {
+    height: 7rem;
+    object-fit: contain;
+    border-radius: 4px;
+    transition: transform 0.2s ease;
+}
+
+.radio-button:hover .cards {
+    transform: scale(1.1);
 }

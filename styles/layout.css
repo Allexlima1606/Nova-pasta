@@ -6,7 +6,9 @@
    
 }
 
-main {    
+main {  
+    display: flex;  
+    position: static;
     background-color: var(--surface-primary);
     margin-left: 10rem;
     margin-top: 3rem;
@@ -14,8 +16,9 @@ main {
     border-radius: 1rem 0 0 1rem;
     max-height: 49.50rem;
 
+
     .hero-icon {
-        position: absolute;
+        position: fixed;
         margin-top: 3rem;
         margin-left: 2rem;
         width: 2.86rem;
@@ -24,16 +27,16 @@ main {
     }
 
     .hero-icon-1 {
-        position: absolute;
+        position: fixed;
         margin-top: 7rem;
         margin-left: 2rem;
-        /* width: 21rem; */
+        width: 21rem;
         height: 3.37rem;
         z-index: 2;
     }
 
   .hero-icon-2 {
-        position: absolute;
+        position: fixed;
         margin-top: 2rem;
         width:28rem;
         height: 45.50rem;
@@ -42,7 +45,7 @@ main {
     }
 
     .hero-text p {
-        position: absolute;
+        position: fixed;
         margin-left: 2rem;
         margin-top: 12rem;
         font: 400 .850rem/1.5 var(--font-family);
@@ -70,4 +73,63 @@ main {
     display: flex;
     gap: 1rem;
     
+}
+
+/* Responsividade para tablets (largura máxima de 768px) */
+@media (max-width: 1630px) {
+    #app {
+        grid-template-columns: 1fr; /* Coluna única */
+    }
+
+    main {
+        margin-left: 0;
+        margin-top: 2rem;
+        padding-left: 1rem;
+        border-radius: 1rem;
+    }
+
+    .container {
+        margin-top: 2rem;
+        padding-left: 1rem;
+        border-radius: 1rem;
+    }
+
+    aside {
+        padding: 2rem;
+    }
+}
+
+/* Responsividade para dispositivos móveis (largura máxima de 480px) */
+@media (max-width: 1630px) {
+    #app {
+        grid-template-columns: 1fr; /* Coluna única */
+    }
+
+    main {
+        margin: 1rem 0;
+        padding: 1rem;
+        border-radius: 0.5rem;
+    }
+
+    .container {
+        margin: 1rem 0;
+        padding: 1rem;
+        border-radius: 0.5rem;
+    }
+
+    aside {
+        padding: 1rem;
+    }
+
+    .hero-icon,
+    .hero-icon-1,
+    .hero-icon-2 {
+        width: 100%; /* Ajusta as imagens para caberem na tela */
+        height: auto;
+    }
+
+    .hero-text p {
+        font-size: 0.75rem; /* Reduz o tamanho da fonte */
+        margin-top: 8rem;
+    }
 }

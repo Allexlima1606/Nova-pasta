@@ -11,7 +11,8 @@ form {
 
 /* Estilo dos fieldsets */
 fieldset {
-    border: 1px solid var(--surface-disabled);
+    /* border: none; */
+    /* border: 1px solid var(--surface-disabled); */
     border-radius: 0.5rem;
     display: grid;
     gap: 2rem;
