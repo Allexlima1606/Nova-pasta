@@ -26,56 +26,59 @@
                 <h1>Crie seu convite</h1>
 
                 <!-- Informações do evento -->
-                <form class="event-info">
+                <form class="event-info" aria-labelledby="event-info-title">
                     <fieldset class="address">
-                        <h2>Sobre o evento</h2>
+                        <legend id="event-info-title">Sobre o evento</legend>
 
-                        <div class="input-wrapper">
-                            <label for="event-name">Nome do evento</label>
-                            <input type="text" id="event-name" placeholder="Nome do evento" class="input-field"
-                                required>
+                        <div class="input-wrapper wrapper">
+                            <label for="event-name">Título</label>
+                            <input type="text" id="event-name" placeholder="Nome do evento" class="input-field">
                         </div>
 
                         <div class="flex">
                             <div class="input-wrapper flex-2">
                                 <label for="start-date">Início</label>
-                                <input type="date" name="date" id="start-date" required>
+                                <input type="date" name="start-date" id="start-date" class="flex-1" required>
                             </div>
 
                             <div class="input-wrapper flex-1">
                                 <label for="end-date">Fim</label>
-                                <input type="date" name="date" id="end-date" required>
+                                <input type="date" name="end-date" id="end-date" class="flex-2" required>
                             </div>
                         </div>
 
-                        <div class=" flex">
-                            <div class="input-wrapper flex-2">
-                                <label>Tipo</label>
-                                <input type="radio" name="tipo" value="presencial" required>
-                                Presencial</label>
-                                <input type="radio" name="tipo" value="online"> Online</label>
+                        <div class="flex">
+                            <div class="input-wrapper">
+                                <label for="event-type">Tipo</label>
+                                <input type="checkbox" id="toggle-image" class="toggle-checkbox">
+                                <label for="toggle-image" class="image-label">
+                                    <img src="./assets/icons/Box.svg" alt="box" class="image-box">
+                                    <img src="./assets/icons/Box-1.svg" alt="box-checked"
+                                        class="image-box-checked">
+                                </label>
                             </div>
-
                             <div class="input-wrapper flex-1">
                                 <label for="event-location">Local</label>
-                                <input type="text" id="event-location" placeholder="Link ou endereço"
-                                    class="input-field">
+                                <input type="text" id="event-location" placeholder="Link ou endereço" class="flex-1">
                             </div>
+                        </div>
 
+                        <div class="input-wrapper">
                             <label for="event-details">Detalhes do evento</label>
-                            <textarea id="event-details" placeholder="Escreva sobre os detalhes do evento"
-                                class="textarea-field"></textarea>
+                            <textarea id="event-details" cols="30" rows="5"
+                                placeholder="Escreva sobre os detalhes do evento" class="textarea-field"></textarea>
+                        </div>
                     </fieldset>
                 </form>
 
                 <!-- Personalização -->
                 <fieldset class="enroll-options">
-                    <legend>Personalização</legend>
-
+                    <img src="./assets/icons/paintbrush-vertical.svg" alt="icon-paint" class="paint-icon">
+                    <h3>Personalização</h3>
                     <div class="palette-container">
                         <label for="primary-color">Cor principal:</label>
                         <div class="color-palette">
-                            <button class="color" style="background-color: #00BFFF;"></button>
+                            <button class="color" style="background-color: #0008f0;"></button>
                             <button class="color" style="background-color: #00BFFF;"></button>
                             <button class="color" style="background-color: #8A2BE2;"></button>
                             <button class="color" style="background-color: #FF1493;"></button>
@@ -188,64 +191,62 @@
                                 <p id="cover-photo">Nenhum arquivo selecionado</p>
                             </div>
                         </div>
-                        </fieldset>
+                </fieldset>
 
-                        <!-- Informações de contato -->
-                        <section class="contact-info">
-                            <div class="contact">
-                                <img src="./assets/icons/contact.svg" alt="icon-contact" class="contact-icon">
-                                <h2>Dados para contato</h2>
-                            </div>
+                <!-- Informações de contato -->
+                <section class="contact-info">
+                    <div class="contact">
+                        <img src="./assets/icons/contact.svg" alt="icon-contact" class="contact-icon">
+                        <h2>Dados para contato</h2>
+                    </div>
 
-                            <label for="full-name">Nome</label>
-                            <input type="text" id="full-name" placeholder="Nome completo" class="input-field" required>
-                            <div class="error">
-                                <img src="assets/icons/alert-circle.svg" alt="Erro" class="error-icon">
-                                <span>Campo obrigatorio</span>
-                            </div>
+                    <label for="full-name">Nome</label>
+                    <input type="text" id="full-name" placeholder="Nome completo" class="input-field" required>
+                    <div class="error">
+                        <img src="assets/icons/alert-circle.svg" alt="Erro" class="error-icon">
+                        <span>Campo obrigatorio</span>
+                    </div>
 
-                            <div class="flex">
-                                <div class="input-wrapper flex-2">
-                                    <label for="email">E-mail</label>
-                                    <input type="email" id="email" placeholder="exemplo@email.com" class="input-field"
-                                        required>
-                                </div>
+                    <div class="flex">
+                        <div class="input-wrapper flex-2">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" placeholder="exemplo@email.com" class="input-field" required>
+                        </div>
 
-                                <div class="input-wrapper flex-1">
-                                    <label for="phone">Telefone</label>
-                                    <input type="tel" id="phone" placeholder="(99) 99999-9999" class="input-field"
-                                        required>
-                                </div>
-                            </div>
-                            <div class=" check">
-                                <div class="terms-wrapper input-wrapper checkbox-wrapper">
-                                    <div class="checkbox-image"></div>
-                                    <input type="checkbox" id="terms" name="terms" required>
-                                    <label for="terms">
-                                        Li e concordo com os <strong>Termos e Condições</strong> e a <strong>Política de
-                                            Privacidade</strong>
-                                    </label>
-                                </div>
-                                <div class="terms-wrapper input-wrapper checkbox-wrapper">
-                                    <div class="checkbox-image"></div>
-                                    <input type="checkbox" id="terms" name="terms" required>
-                                    <label for="terms">
-                                        Aceito receber atualizações por <strong>e-mail.</strong>
-                                    </label>
-                                </div>
-                                <div class="terms-wrapper input-wrapper checkbox-wrapper">
-                                    <div class="checkbox-image"></div>
-                                    <input type="checkbox" id="terms" name="terms" required>
-                                    <label for="terms">
-                                        Aceito receber promoções por <strong>SMS.</strong>
-                                    </label>
-                                </div>
-                            </div>
-                            <button class="btn" type="button">
-                                <img src="./assets/icons/ticket.svg" alt="Ícone de convite" class="btn-icon">
-                                Gerar convite
-                            </button>
-                        </section>
+                        <div class="input-wrapper flex-1">
+                            <label for="phone">Telefone</label>
+                            <input type="tel" id="phone" placeholder="(99) 99999-9999" class="input-field" required>
+                        </div>
+                    </div>
+                    <div class=" check">
+                        <div class="terms-wrapper input-wrapper checkbox-wrapper">
+                            <div class="checkbox-image"></div>
+                            <input type="checkbox" id="terms" name="terms" required>
+                            <label for="terms">
+                                Li e concordo com os <strong>Termos e Condições</strong> e a <strong>Política de
+                                    Privacidade</strong>
+                            </label>
+                        </div>
+                        <div class="terms-wrapper input-wrapper checkbox-wrapper">
+                            <div class="checkbox-image"></div>
+                            <input type="checkbox" id="terms" name="terms" required>
+                            <label for="terms">
+                                Aceito receber atualizações por <strong>e-mail.</strong>
+                            </label>
+                        </div>
+                        <div class="terms-wrapper input-wrapper checkbox-wrapper">
+                            <div class="checkbox-image"></div>
+                            <input type="checkbox" id="terms" name="terms" required>
+                            <label for="terms">
+                                Aceito receber promoções por <strong>SMS.</strong>
+                            </label>
+                        </div>
+                    </div>
+                    <button class="btn" type="button">
+                        <img src="./assets/icons/ticket.svg" alt="Ícone de convite" class="btn-icon">
+                        Gerar convite
+                    </button>
+                </section>
             </aside>
         </div>
     </div>

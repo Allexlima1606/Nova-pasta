@@ -1,9 +1,8 @@
 #app {
     background-color: var(--surface-secondary);
     display: grid;
-    grid-template-columns: 35% 57.75%; /* Layout em duas colunas */
-    
-   
+    grid-template-columns: 38% 55.00%; /* Layout em duas colunas */
+    border-radius: 3rem;
 }
 
 main {  
@@ -15,6 +14,7 @@ main {
     padding-left: 2rem;
     border-radius: 1rem 0 0 1rem;
     max-height: 49.50rem;
+    overflow: hidden;
 
 
     .hero-icon {
@@ -24,6 +24,7 @@ main {
         width: 2.86rem;
         height: 3rem;
         z-index: 2;
+        overflow: hidden;
     }
 
     .hero-icon-1 {
@@ -33,6 +34,7 @@ main {
         width: 21rem;
         height: 3.37rem;
         z-index: 2;
+        overflow: hidden;
     }
 
   .hero-icon-2 {
@@ -42,6 +44,7 @@ main {
         height: 45.50rem;
         border-radius: 1rem;
         z-index: 1;
+        overflow: hidden;
     }
 
     .hero-text p {
@@ -50,21 +53,26 @@ main {
         margin-top: 12rem;
         font: 400 .850rem/1.5 var(--font-family);
         z-index: 2;
+        overflow: hidden;
     }
 }
 
 .container {
-    background-color: var(--surface-primary);
-    margin-top: 3rem;
-    padding-left: 2rem;
-    border-radius: 0 1rem 1rem 0;
-    
+    background-color: var(--surface-primary); 
+    max-width: 60.50rem;
+    margin-top: 3rem; 
+    padding: 3rem;
+    border-radius: 0  1rem 1rem;
+    overflow: auto ;/* Permite rolagem vertical */
+    max-height: 94vh; /* Define uma altura máxima para ativar a rolagem */
+
 
     aside {
         background-color: var(--surface-secondary); 
-        max-width: 63.50rem;
-        margin-top: 2rem; 
-        padding: 3rem;
+        max-width: 48.50rem;
+        margin-top: -1rem; 
+        padding: 2rem;
+        border-radius: 1rem;
     }
 
 }

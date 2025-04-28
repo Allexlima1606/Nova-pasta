@@ -2,12 +2,16 @@ input, textarea, select {
     appearance: none;
     width: 100%;
     border-radius: .5rem;
-    border: 2px solid transparent;
+    border: 1px solid;
     outline: 1px solid var(--stroke-default);
-
+    background-color: var(--surface-default);
     padding: .75rem 1rem;
-
+    color: var(--text-primary);
     font: var(--text);
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    resize: none;
+    
 }
 
 label {
@@ -59,9 +63,7 @@ input[type="date"] {
 input {
     &[disabled] {
         background-color: var(--surface-disabled);
-
         border: 1px solid var(--stroke-default);
-
         color: var(--text-primary);
     }
 

@@ -33,6 +33,7 @@
 
 /* Estilos Base */
 body {
+    margin: 0 4rem;
     font: var(--text);
     color: var(--text-secondary);
     background-color: var(--surface-primary);
