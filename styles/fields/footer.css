@@ -1,6 +1,9 @@
 .footer {
+    margin-top: 1rem;
     display: flex;
-    justify-content: space-around; /* Espaçamento entre os itens */
+    justify-content: space-between; 
+    align-items: center;
+    padding: 1rem 0; /* Adiciona espaçamento interno */
 }
 
 /* Estilo para a seção de opções de estilo */

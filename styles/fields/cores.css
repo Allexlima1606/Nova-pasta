@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     margin-top: -2rem; /* Ajusta o espaçamento superior */
+    margin-left: 4rem; /* Ajusta o espaçamento à esquerda */
 
     h3 {
         margin-top: 1.5rem;
@@ -19,7 +20,9 @@
 }
 
 .palette-container {
+    width: 38rem;
     margin-top: 0.87rem;
+    
 }
 
 .color-palette {

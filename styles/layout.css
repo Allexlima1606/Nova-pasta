@@ -58,7 +58,7 @@ main {
 
 .container {
     background-color: var(--surface-primary);
-    max-width: 60.5rem;
+    /* max-width: 60.5rem; */
     margin-top: 3rem;
     padding: 3rem;
     border-radius: 0 1rem 1rem 0;
@@ -72,6 +72,11 @@ aside {
     margin-top: -1rem;
     padding: 2rem;
     border-radius: 1rem;
+
+    h1 {
+        margin-left: 3.8rem;
+        font: 600 2.5rem/1.5 var(--font-family);
+    }
 }
 
 .contact {

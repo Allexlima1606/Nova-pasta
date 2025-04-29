@@ -1,4 +1,4 @@
-.dropzone {
+dropzone {
     border: 0.125rem dashed transparent; /* 2px convertido para rem */
     outline: 0.0625rem dashed var(--stroke-default); /* 1px convertido para rem */
     border-radius: 0.25rem;
@@ -44,4 +44,4 @@
         border-color: var(--stroke-highlight);
         background-color: var(--surface-secondary);
     }
-}
+ } 

@@ -10,7 +10,6 @@
     border-radius: 0.875rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin-top: 1rem;
-    margin-left: 2.5rem;
 }
 
 /* Lista de temas */
@@ -25,9 +24,6 @@
 
 /* Cada item da lista */
 .radio-inner {
-    /* display: flex; */
-    /* justify-content: center; */
-    /* align-items: center; */
     border: 1px solid transparent;
     border-radius: 8px;
     transition: border-color 0.3s ease, transform 0.2s ease;
