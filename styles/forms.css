@@ -3,9 +3,9 @@
 
 /* Estilo geral do formulário */
 form {
-    padding: 2rem;
+    padding: 1.5rem;
     width: 42rem;
-    margin-left: 1.5rem;
+    /* margin-left: 1.5rem; */
 }
 
 fieldset {
@@ -140,13 +140,14 @@ textarea {
 }
 
 /* Responsividade */
-@media (max-width: 768px) {
+@media (max-width: 1600px) {
     .flex {
-        flex-direction: column;
+        width: auto;
+        /* flex-direction: column; */
     }
 
     button {
         width: 100%;
-        justify-content: center;
+        /* justify-content: center; */
     }
 }

@@ -32,19 +32,48 @@
 }
 
 /* Botão alinhado à direita */
-.contact-info .btn {
-    margin: 1rem 0 0 auto; /* Remove centralização e alinha à direita */
+.contact-info {
+    width: 40rem;
+    margin-left: 1.5rem;
+    margin-bottom: 3rem;
+
+    .btn {
+        margin: 1rem 0 0 auto; /* Remove centralização e alinha à direita */
+    }
 }
 
 /* Estilos responsivos */
-@media (max-width: 768px) {
+@media (max-width: 1600px) {
     .btn {
-        font-size: 0.9rem;
-        padding: 0.5rem 1rem;
+        font-size: 0.9rem; /* Reduz o tamanho da fonte */
+        padding: 0.5rem 1rem; /* Ajusta o espaçamento interno */
     }
 
     .btn-icon {
         width: 1rem;
-        height: 1rem;
+        height: 1rem; /* Reduz o tamanho do ícone */
+    }
+
+    .contact-info {
+        /* width: 100%; Garante que o container ocupe toda a largura */
+        margin-left: 0; /* Remove margens laterais */
+    }
+}
+
+@media (max-width: 780px) {
+    .btn {
+        font-size: 0.8rem; /* Reduz ainda mais o tamanho da fonte */
+        padding: 0.4rem 0.8rem; /* Ajusta o espaçamento interno */
+    }
+
+    .btn-icon {
+        width: 0.9rem;
+        height: 0.9rem; /* Ajusta o tamanho do ícone para telas menores */
+    }
+
+    .contact-info {
+        /* width: 100%; Garante que o container ocupe toda a largura */
+        margin-left: 0; /* Remove margens laterais */
+        margin-bottom: 2rem; /* Reduz o espaçamento inferior */
     }
 }

@@ -1,14 +1,14 @@
 input, textarea, select {
     appearance: none;
-    width: 100%;
+    width: 100%; /* Garante que os campos ocupem toda a largura disponível */
     border-radius: 0.5rem;
     border: 1px solid;
     outline: 1px solid var(--stroke-default);
     background-color: var(--surface-default);
-    padding: 0.75rem 1rem;
+    padding: 0.75rem;
     color: var(--text-primary);
     font: var(--text);
-    transition: border-color 0.3s ease, background-color 0.3s ease; /* Especificar propriedades para melhor desempenho */
+    transition: border-color 0.3s ease, background-color 0.3s ease;
     box-sizing: border-box;
     resize: none;
 }
@@ -49,8 +49,9 @@ input[type="date"]::before {
     transform: translateY(-50%);
 }
 
-.address .flex {
-    gap: 1.25rem;
+.address {
+    width: 100%; /* Ajusta a largura para telas menores */
+    max-width: 40rem; /* Define um limite máximo */
 }
 
 .input-wrapper:has([disabled]) {
@@ -86,5 +87,45 @@ input {
 
     &:not(:focus):valid + .error {
         display: none;
+    }
+}
+
+/* Responsividade para tablets (largura máxima de 768px) */
+@media (max-width: 1600px) {
+    .address {
+        /* width: 100%; Garante que o campo ocupe toda a largura */
+        padding: 0.5rem;
+    }
+
+    input, textarea, select {
+        font-size: 0.9rem; /* Ajusta o tamanho da fonte */
+        padding: 0.65rem; /* Reduz o espaçamento interno */
+    }
+
+    label {
+        font-size: 0.85rem; /* Reduz o tamanho da fonte do rótulo */
+    }
+}
+
+/* Responsividade para dispositivos móveis (largura máxima de 480px) */
+@media (max-width: 768px) {
+    .address {
+        width: 100%; /* Garante que o campo ocupe toda a largura */
+        padding: 0.5rem;
+    }
+
+    input, textarea, select {
+        font-size: 0.8rem; /* Ajusta o tamanho da fonte */
+        padding: 0.5rem; /* Reduz o espaçamento interno */
+    }
+
+    label {
+        font-size: 0.75rem; /* Reduz o tamanho da fonte do rótulo */
+    }
+
+    input[type="date"]::before {
+        right: 0.5rem; /* Ajusta o ícone para telas menores */
+        width: 1rem;
+        height: 1rem;
     }
 }

@@ -30,7 +30,7 @@ main {
 .hero-icon-1 {
     position: fixed;
     margin-top: 7rem;
-    margin-left: 2rem;
+    margin-left: -1.5rem;
     width: 21rem;
     height: 3.375rem; /* 54px -> 3.375rem */
     z-index: 2;
@@ -58,24 +58,33 @@ main {
 
 .container {
     background-color: var(--surface-primary);
-    /* max-width: 60.5rem; */
-    margin-top: 3rem;
+    max-width: 55rem;
+    margin: 3rem 0 0 0;
     padding: 3rem;
-    border-radius: 0 1rem 1rem 0;
+    border-radius: 0 1rem 1rem 1rem;
     overflow: auto; /* Permite rolagem vertical */
     max-height: calc(100vh - 3rem); /* Ajuste para evitar problemas em dispositivos móveis */
+
+    /* Esconde a barra de rolagem */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer e Edge */
+}
+
+.container::-webkit-scrollbar {
+    display: none; /* Chrome, Safari e Edge */
 }
 
 aside {
     background-color: var(--surface-secondary);
     max-width: 48.5rem;
     margin-top: -1rem;
-    padding: 2rem;
+
+    padding-top: 3rem;
     border-radius: 1rem;
 
     h1 {
-        margin-left: 3.8rem;
-        font: 600 2.5rem/1.5 var(--font-family);
+        margin-left: 2rem;
+        font: 600 2.3rem/1.5 var(--font-family);
     }
 }
 
@@ -85,60 +94,115 @@ aside {
 }
 
 /* Responsividade para tablets (largura máxima de 768px) */
-@media (max-width: 768px) {
+@media (max-width: 1600px) {
     #app {
-        grid-template-columns: 1fr; /* Coluna única */
+        grid-template-columns: 1fr 1rf; /*Coluna única*/
+        /* padding: 1rem; Adiciona espaçamento interno */
     }
 
     main {
-        margin-left: 0;
+        margin-left: 1rem;
         margin-top: 2rem;
-        padding-left: 1rem;
+        /* padding: 1rem */
         border-radius: 1rem;
+        flex-direction: column; /* Ajusta o layout para empilhar os elementos */
     }
 
     .container {
         margin-top: 2rem;
-        padding-left: 1rem;
+        padding: 1rem;
         border-radius: 1rem;
+        /* max-width: 100%; Ajusta a largura para caber na tela */
     }
 
     aside {
         padding: 2rem;
+        max-width: 100%; /* Ajusta a largura para caber na tela */
+    }
+
+    .hero-icon {
+        width: 10%; /* Ajusta as imagens para caberem melhor */
+        margin-top: 3rem;
+        margin-left: -1.5%;
+        
+    }
+
+    .hero-icon-1 {
+        width: 20%; /* Ajusta as imagens para caberem melhor */
+        margin-top: 7rem;
+        margin-left: -1%;
+    }
+
+    .hero-icon-2 {
+            width: 30% ; /* Ajusta as imagens para caberem melhor */
+            height:67%;
+            margin: 2% auto; /* Centraliza as imagens */
+        }
+
+    .hero-text p {
+        width: 20%;
+        font-size: 0.85rem; /* Ajusta o tamanho da fonte */
+        margin-top: 12rem;
+        margin-left:2%;
     }
 }
 
 /* Responsividade para dispositivos móveis (largura máxima de 480px) */
-@media (max-width: 480px) {
+@media (max-width: 768px) {
     #app {
         grid-template-columns: 1fr; /* Coluna única */
+        /* padding: 0.5rem; */
     }
 
     main {
         margin: 1rem 0;
-        padding: 1rem;
+        padding: 0.5rem;
         border-radius: 0.5rem;
+        flex-direction: column; /* Empilha os elementos */
     }
 
     .container {
-        margin: 1rem 0;
-        padding: 1rem;
+        /* margin: 1rem 0; */
+        padding: 0.5rem;
         border-radius: 0.5rem;
+        max-width: 100%; /* Ajusta a largura para caber na tela */
     }
 
     aside {
         padding: 1rem;
+        max-width: 100%; /* Ajusta a largura para caber na tela */
     }
 
     .hero-icon,
     .hero-icon-1,
     .hero-icon-2 {
-        width: 100%; /* Ajusta as imagens para caberem na tela */
+        width: 2rem; 
         height: auto;
     }
 
     .hero-text p {
         font-size: 0.75rem; /* Reduz o tamanho da fonte */
-        margin-top: 8rem;
+        margin-top: 4rem;
+    }
+
+    .contact {
+        flex-direction: column; /* Empilha os elementos de contato */
+        gap: 0.5rem; /* Reduz o espaçamento entre os elementos */
+    }
+}
+
+/* Responsividade para telas muito pequenas (largura máxima de 320px) */
+@media (max-width: 320px) {
+    .hero-text p {
+        font-size: 0.65rem; /* Reduz ainda mais o tamanho da fonte */
+        margin-top: 3rem;
+    }
+
+    .container {
+        padding: 0.5rem;
+    }
+
+    aside {
+        padding: 0.5rem;
     }
 }

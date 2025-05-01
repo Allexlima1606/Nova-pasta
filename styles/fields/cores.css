@@ -1,12 +1,12 @@
 .enroll-options {
-    display: flex;
-    flex-direction: column;
-    margin-top: -2rem; /* Ajusta o espaçamento superior */
-    margin-left: 4rem; /* Ajusta o espaçamento à esquerda */
+    /* padding: 2rem; */
+    /* border: 1px solid; */
+    width: 42rem;
+    margin-left: 1.5rem;
 
     h3 {
         margin-top: 1.5rem;
-        font-size: 1.125rem; /* 18px convertido para rem */
+        font-size: 1.5rem; /* 18px convertido para rem */
         font-weight: 600;
         color: var(--text-primary);
     }
@@ -20,8 +20,9 @@
 }
 
 .palette-container {
-    width: 38rem;
+    width: 40rem;
     margin-top: 0.87rem;
+    /* border: 1px solid; */
     
 }
 

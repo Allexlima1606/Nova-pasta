@@ -6,9 +6,10 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    /* border: 1px solid ; */
     gap: 1rem;
     border-radius: 0.875rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
     margin-top: 1rem;
 }
 
@@ -24,8 +25,8 @@
 
 /* Cada item da lista */
 .radio-inner {
-    border: 1px solid transparent;
-    border-radius: 8px;
+    /* border: 1px solid transparent; */
+    border-radius: 5px;
     transition: border-color 0.3s ease, transform 0.2s ease;
 }
 
@@ -48,14 +49,15 @@
 }
 
 .radio-button:focus {
-    outline: 3px solid #20b2aa;
-    outline-offset: 2px;
+    outline: 2px solid #20b2aa;
+    outline-offset: 1px;
     border-radius: 8px;
 }
 
 /* Imagens dos temas */
 .cards {
-    height: 7rem;
+    height: 7.15rem;
+
     object-fit: contain;
     border-radius: 4px;
     transition: transform 0.2s ease;
